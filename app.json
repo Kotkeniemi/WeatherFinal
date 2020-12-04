@@ -1,0 +1,7 @@
+{
+    "name": "WeatherFInal",
+    "description": "Application FInished",
+    "repository": "https://github.com/Kotkeniemi/WeatherFinal",
+    "logo": "https://node-js-sample.herokuapp.com/node.png",
+    "keywords": ["node", "express", "static"]
+  }
