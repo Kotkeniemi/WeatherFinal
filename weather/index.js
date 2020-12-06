@@ -3,8 +3,8 @@ const bodyParser = require('body-parser');
 const session = require('express-session');
 const request = require('request');
 const app = express()
-
-const apiKey = 'a3c9cab3d03eaa800aa57ce0da240f45';
+// Add your own API KEY 
+const apiKey = '';
 
 
 
