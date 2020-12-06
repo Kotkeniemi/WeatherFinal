@@ -113,7 +113,7 @@ app.post('/login', redirectToHome,(req,res)=> {
       const user = users.find(user => user.email === email && user.password === password)
       if(user){
           req.session.userId = user.id;
-        
+
          //var thing2 = location= "/views/index.html";;
       }
   }
@@ -174,10 +174,10 @@ app.post('/weather', redirectUser, function (req, res) {
           if(weather.main == undefined){
             res.render('index', {weather: null, humidity: null, error: 'Error, please try again'});
           } else {
-            let weatherText = `It's ${weather.main.temp} degrees in ${weather.name}!`;
+            let weatherText = `It's ${weather.main.temp} degrees in ${weather.name} in ${weather.sys.country} !`;
             let humidityText = `The level of humidity is ${weather.main.humidity}.`;
             let windText =`The current wind reading is ${weather.wind.speed}`;
-            let coordText =`The coordinates of the the city our ${weather.coord.lon} longitude ~ ${weather.coord.lan} latitude`;
+            let coordText =`The coordinates of the the city our ${weather.coord.lon} longitude ~ ${weather.coord.lat} latitude`;
             res.render('index', {weather: weatherText , humidity: humidityText, wind: windText, coord: coordText, error: null});
           }
         }
